@@ -41,7 +41,7 @@ Library 默认复用，每个项目的每个目标平台一份：`data/workspace
 
 ## 构建配置
 
-`executeMethod` 必填，必须是仓库里已有的静态方法，例如 `BuildCli.Run`。保存和入队时为空都会拒绝。
+`executeMethod` 必填，必须是仓库里已有的静态方法。`BuildCli.Run` 打应用，`BuildCli.RunResources` 只打热更资源包。保存和入队时为空都会拒绝。
 
 Unity 版本必须和 `ProjectVersion.txt` 的完整版本一致，不会用别的已安装版本代替。自定义路径优先于已登记版本。
 
