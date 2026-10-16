@@ -1,0 +1,15 @@
+services:
+  ucl:
+    build: .
+    container_name: keel
+    ports:
+      - "7850:7850"
+    volumes:
+      - ucl-data:/data
+    environment:
+      - PORT=7850
+      - UCL_DATA_DIR=/data
+    restart: unless-stopped
+
+volumes:
+  ucl-data:
